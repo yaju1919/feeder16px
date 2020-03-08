@@ -44,7 +44,7 @@
                 continue;
             }
             var rgb = [r,g,b].map(function(n){
-                return n.toString(16);
+                return ("00" + n.toString(16)).slice(-2);
             }).join('');
             if(rgb !== rgb_log) { // ログと別なら
                 if(rgb_log) result += "}";
