@@ -59,7 +59,8 @@
         var str = result.split('\n').map(function(v){
             return v.replace(/　+$/,'');
         }).join('\n').replace(/^\n+/,'').replace(/\n+$/,'');
-        yaju1919.addInputText(h_result.empty(),{
+        $("<div>",{text:"文字数："+str.length}).appendTo(h_result.empty());
+        yaju1919.addInputText(h_result,{
             title: "output",
             readonly: true,
             textarea: true,
